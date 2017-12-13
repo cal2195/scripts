@@ -13,6 +13,6 @@ trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 info "Starting Backup..."
 
 # --exclude '/tmp' for exclusions!
-borg create --progess --stats ::{hostname}-{user}-{now:%Y-%m-%dT%H:%M:%S} $BACKUP_LOCATIONS
+borg create --progress --stats ::{hostname}-{user}-{now:%Y-%m-%dT%H:%M:%S} $BACKUP_LOCATIONS
 
 info "Backup Complete!"
